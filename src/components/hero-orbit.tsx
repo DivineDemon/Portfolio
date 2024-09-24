@@ -1,25 +1,50 @@
 import { PropsWithChildren } from "react";
 
+import { cn } from "@/lib/utils";
+
 const HeroOrbit = ({
   children,
   size,
   rotation,
-}: PropsWithChildren<{ size: number; rotation: number }>) => {
+  spinDuration,
+  orbitDuration,
+  shouldSpin = false,
+  shouldOrbit = false,
+}: PropsWithChildren<{
+  size: number;
+  rotation: number;
+  spinDuration?: string;
+  orbitDuration?: string;
+  shouldSpin?: boolean;
+  shouldOrbit?: boolean;
+}>) => {
   return (
     <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
       <div
-        style={{
-          height: `${size}px`,
-          width: `${size}px`,
-          transform: `rotate(${rotation}deg)`,
-        }}
-        className="flex items-start justify-start"
+        className={cn(shouldOrbit && "animate-spin")}
+        style={{ animationDuration: orbitDuration }}
+        aria-hidden="true"
       >
         <div
-          className="inline-flex"
-          style={{ transform: `rotate(${-rotation}deg)` }}
+          style={{
+            height: `${size}px`,
+            width: `${size}px`,
+            transform: `rotate(${rotation}deg)`,
+          }}
+          className="flex items-start justify-start"
         >
-          {children}
+          <div
+            className={cn(shouldSpin && "animate-spin")}
+            style={{ animationDuration: spinDuration }}
+            aria-hidden="true"
+          >
+            <div
+              className="inline-flex"
+              style={{ transform: `rotate(${-rotation}deg)` }}
+            >
+              {children}
+            </div>
+          </div>
         </div>
       </div>
     </div>
