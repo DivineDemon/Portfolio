@@ -1,4 +1,9 @@
+"use client";
+
 import Image from "next/image";
+import { useRef } from "react";
+
+import { motion } from "framer-motion";
 
 import ChromeIcon from "@/assets/icons/chrome.svg";
 import CSSIcon from "@/assets/icons/css3.svg";
@@ -15,6 +20,30 @@ import SectionHeader from "@/components/section-header";
 import ToolboxItem from "@/components/toolbox-item";
 
 const toolboxItems = [
+  {
+    title: "JavaScript",
+    iconType: JavScriptIcon,
+  },
+  {
+    title: "HTML5",
+    iconType: HTMLIcon,
+  },
+  {
+    title: "CSS3",
+    iconType: CSSIcon,
+  },
+  {
+    title: "React",
+    iconType: ReactIcon,
+  },
+  {
+    title: "Chrome",
+    iconType: ChromeIcon,
+  },
+  {
+    title: "Github",
+    iconType: GithubIcon,
+  },
   {
     title: "JavaScript",
     iconType: JavScriptIcon,
@@ -87,6 +116,8 @@ const hobbies = [
 ];
 
 export const AboutSection = () => {
+  const constraintRef = useRef(null);
+
   return (
     <div className="py-20 lg:py-28">
       <div className="container">
@@ -112,14 +143,14 @@ export const AboutSection = () => {
                 description="Explore the technologies and tools I use to craft exceptional digital experiences."
               />
               <div className="flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-                <div className="flex flex-none gap-6 py-0.5 pr-6">
+                <div className="flex flex-none animate-move-left gap-6 py-0.5 pr-6 [animation-duration:30s]">
                   {toolboxItems.map((item, idx) => (
                     <ToolboxItem key={idx} item={item} />
                   ))}
                 </div>
               </div>
               <div className="mt-6 flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-                <div className="flex flex-none -translate-x-1/2 gap-6 py-0.5 pr-6">
+                <div className="flex flex-none -translate-x-1/2 animate-move-right gap-6 py-0.5 pr-6 [animation-duration:15s]">
                   {toolboxItems.map((item, idx) => (
                     <ToolboxItem key={idx} item={item} />
                   ))}
@@ -134,21 +165,23 @@ export const AboutSection = () => {
                 className="p-6"
                 description="Explore my interests and hobbies beyond the digital realm."
               />
-              <div className="relative flex-1">
+              <div ref={constraintRef} className="relative flex-1">
                 {hobbies.map((hobby, idx) => (
-                  <div
+                  <motion.div
                     key={idx}
                     className="absolute inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 px-6 py-1.5"
                     style={{
                       left: hobby.left,
                       top: hobby.top,
                     }}
+                    drag
+                    dragConstraints={constraintRef}
                   >
                     <span className="font-medium text-gray-950">
                       {hobby.title}
                     </span>
                     <span>{hobby.emoji}</span>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </Card>
@@ -158,7 +191,9 @@ export const AboutSection = () => {
                 alt="map"
                 className="size-full object-cover object-left-top"
               />
-              <div className="absolute left-1/2 top-1/2 size-20 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 after:absolute after:inset-0 after:rounded-full after:outline after:outline-2 after:outline-offset-2 after:outline-gray-950/30 after:content-['']">
+              <div className="absolute left-1/2 top-1/2 size-20 -translate-x-1/2 -translate-y-1/2 rounded-full after:absolute after:inset-0 after:rounded-full after:outline after:outline-2 after:outline-offset-2 after:outline-gray-950/30 after:content-['']">
+                <div className="absolute inset-0 -z-20 animate-ping rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 [animation-duration:2s]" />
+                <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400" />
                 <Image
                   src={smileMemoji}
                   alt="smile-memoji"
