@@ -1,9 +1,11 @@
 import { Header } from "@/sections/header";
+import { HeroSection } from "@/sections/hero";
 
 const Home = () => {
   return (
-    <div className="">
+    <div>
       <Header />
+      <HeroSection />
     </div>
   );
 };
