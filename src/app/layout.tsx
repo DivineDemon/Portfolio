@@ -9,7 +9,36 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Mushood Hanif",
   description:
-    "I specialize in transforming designs into functional, high-performing web applications. Let&apos;s discuss your next project.",
+    "I specialize in transforming designs into functional, high-performing web applications. Let's discuss your next project.",
+  abstract:
+    "I specialize in transforming designs into functional, high-performing web applications. Let's discuss your next project.",
+  alternates: {
+    canonical: "https://mushoodhanif.com",
+  },
+  applicationName: "Mushood Hanif",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  icons: {
+    icon: "/logo.svg",
+  },
+  openGraph: {
+    title: "Mushood Hanif",
+    description:
+      "I specialize in transforming designs into functional, high-performing web applications. Let's discuss your next project.",
+    url: "https://mushoodhanif.com",
+    siteName: "Mushood Hanif",
+    images: [
+      {
+        url: "https://mushoodhanif.com/og-image.png",
+      },
+    ],
+    type: "website",
+  },
+  keywords:
+    "Frontend Developer, Developer, Software, Software Engineer, Fullstack Developer, Engineer, Web Apps, Websites, Design, Development",
+  publisher: "Mushood Hanif",
 };
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
@@ -26,12 +55,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link
-          rel="icon"
-          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📦</text></svg>"
-        />
-      </head>
       <body
         className={cn(
           "bg-gray-900 font-sans text-white antialiased",
