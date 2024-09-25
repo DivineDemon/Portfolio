@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import ArrowDown from "@/assets/icons/arrow-down.svg";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
@@ -9,10 +10,13 @@ import HeroOrbit from "@/components/hero-orbit";
 
 export const HeroSection = () => {
   return (
-    <div className="relative z-0 overflow-x-clip py-32 md:py-48 lg:py-60">
-      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
+    <div
+      id="home"
+      className="relative z-0 overflow-x-clip py-32 md:py-48 lg:py-60"
+    >
+      <div className="absolute inset-0 -z-30 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
         <div
-          className="absolute inset-0 -z-30 opacity-5"
+          className="absolute inset-0 opacity-5"
           style={{ backgroundImage: `url(${grainImage.src})` }}
         />
         <div className="hero-ring size-[620px]" />
@@ -122,14 +126,20 @@ export const HeroSection = () => {
           </p>
         </div>
         <div className="mt-8 flex flex-col items-center justify-center gap-4 md:flex-row">
-          <button className="inline-flex h-12 items-center gap-2 rounded-xl border border-white/15 px-6">
+          <Link
+            href="#projects"
+            className="inline-flex h-12 items-center gap-2 rounded-xl border border-white/15 px-6"
+          >
             <span className="font-semibold">Explore My Work</span>
             <ArrowDown className="size-4" />
-          </button>
-          <button className="inline-flex h-12 items-center gap-2 rounded-xl border border-white bg-white px-6 text-gray-900">
+          </Link>
+          <Link
+            href="#contact"
+            className="inline-flex h-12 items-center gap-2 rounded-xl border border-white bg-white px-6 text-gray-900"
+          >
             <span>👋</span>
             <span className="font-semibold">Let&apos;s Connect</span>
-          </button>
+          </Link>
         </div>
       </div>
     </div>
