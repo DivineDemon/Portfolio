@@ -7,9 +7,9 @@ import { cn } from "@/lib/utils";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Next.js Starter Boilerplate",
+  title: "Mushood Hanif",
   description:
-    "Basic Standardized Boilerplate for Effective Workflow Across Teams.",
+    "I specialize in transforming designs into functional, high-performing web applications. Let&apos;s discuss your next project.",
 };
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
