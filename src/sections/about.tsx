@@ -41,7 +41,7 @@ const toolboxItems = [
     iconType: ChromeIcon,
   },
   {
-    title: "Github",
+    title: "GitHub",
     iconType: GithubIcon,
   },
   {
@@ -65,7 +65,7 @@ const toolboxItems = [
     iconType: ChromeIcon,
   },
   {
-    title: "Github",
+    title: "GitHub",
     iconType: GithubIcon,
   },
 ];
@@ -131,7 +131,7 @@ export const AboutSection = () => {
             <Card className="h-[320px] md:col-span-2 lg:col-span-1">
               <CardHeader
                 title="My Reads"
-                description="Explore the books shaping my perspectives."
+                description="What currently occupies my leisure time."
               />
               <div className="mx-auto mt-2 w-40 md:mt-0">
                 <Image src={bookImage} alt="book cover" />
