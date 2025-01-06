@@ -1,31 +1,7 @@
 import StarIcon from "@/assets/icons/star.svg";
+import { words } from "@/lib/constants";
 
-const words = [
-  "Performant",
-  "Accessible",
-  "Secure",
-  "Interactive",
-  "Scalable",
-  "User Friendly",
-  "Responsive",
-  "Maintainable",
-  "Search Optimized",
-  "Usable",
-  "Reliable",
-  "Performant",
-  "Accessible",
-  "Secure",
-  "Interactive",
-  "Scalable",
-  "User Friendly",
-  "Responsive",
-  "Maintainable",
-  "Search Optimized",
-  "Usable",
-  "Reliable",
-];
-
-export const TapeSection = () => {
+const TapeSection = () => {
   return (
     <div className="overflow-x-clip py-16 lg:py-24">
       <div className="-mx-1 -rotate-3 bg-gradient-to-r from-emerald-300 to-sky-400">
@@ -45,3 +21,5 @@ export const TapeSection = () => {
     </div>
   );
 };
+
+export default TapeSection;

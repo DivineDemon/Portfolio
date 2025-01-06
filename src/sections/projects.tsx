@@ -1,53 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
 import Card from "@/components/card";
 import SectionHeader from "@/components/section-header";
+import { portfolioProjects } from "@/lib/constants";
 
-const portfolioProjects = [
-  {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
-  },
-  {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
-    results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
-    ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
-  },
-  {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
-  },
-];
-
-export const ProjectsSection = () => {
+const ProjectsSection = () => {
   return (
     <section id="projects" className="pb-16 lg:py-24">
       <div className="container">
@@ -56,6 +16,14 @@ export const ProjectsSection = () => {
           title="Featured Projects"
           description="See how I transformed concepts into engaging digital experiences."
         />
+        <div className="mt-6 flex w-full items-center justify-center">
+          <Link
+            href="https://github.com/DivineDemon"
+            className="rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 px-6 py-2 font-medium text-gray-950"
+          >
+            View More
+          </Link>
+        </div>
         <div className="mt-10 flex flex-col gap-20 md:mt-20">
           {portfolioProjects.map((project, idx) => (
             <Card
@@ -111,3 +79,5 @@ export const ProjectsSection = () => {
     </section>
   );
 };
+
+export default ProjectsSection;

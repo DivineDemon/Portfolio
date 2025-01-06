@@ -5,7 +5,7 @@ import { useState } from "react";
 
 import { cn } from "@/lib/utils";
 
-export const Header = () => {
+const Header = () => {
   const [selected, setSelected] = useState(0);
 
   return (
@@ -55,3 +55,5 @@ export const Header = () => {
     </div>
   );
 };
+
+export default Header;

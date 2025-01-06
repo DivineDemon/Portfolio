@@ -8,7 +8,7 @@ import grainImage from "@/assets/images/grain.jpg";
 import memojiImage from "@/assets/images/memoji-computer.png";
 import HeroOrbit from "@/components/hero-orbit";
 
-export const HeroSection = () => {
+const HeroSection = () => {
   return (
     <div
       id="home"
@@ -145,3 +145,5 @@ export const HeroSection = () => {
     </div>
   );
 };
+
+export default HeroSection;

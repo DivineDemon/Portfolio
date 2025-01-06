@@ -1,15 +1,15 @@
-import createJiti from "jiti";
-import { fileURLToPath } from "node:url";
+/**
+ * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially useful
+ * for Docker builds.
+ */
+import "./src/env.ts";
 
-const jiti = createJiti(fileURLToPath(import.meta.url));
-
-jiti("./src/env/server.ts");
-
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  webpack(config) {
-    const fileLoaderRule = config.module.rules.find((rule) =>
-      rule.test?.test?.(".svg")
+/** @type {import("next").NextConfig} */
+const config = {
+  webpack(config: { module: { rules: any[] } }) {
+    const fileLoaderRule = config.module.rules.find(
+      (rule: { test: { test: (arg0: string) => any } }) =>
+        rule.test?.test?.(".svg")
     );
 
     config.module.rules.push(
@@ -58,10 +58,10 @@ const nextConfig = {
             key: "X-Robots-Tag",
             value: "index, follow",
           },
-        ]
-      }
+        ],
+      },
     ];
-  }
+  },
 };
 
-export default nextConfig;
+export default config;

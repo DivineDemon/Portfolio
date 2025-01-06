@@ -5,12 +5,6 @@ import { useRef } from "react";
 
 import { motion } from "framer-motion";
 
-import ChromeIcon from "@/assets/icons/chrome.svg";
-import CSSIcon from "@/assets/icons/css3.svg";
-import GithubIcon from "@/assets/icons/github.svg";
-import HTMLIcon from "@/assets/icons/html5.svg";
-import ReactIcon from "@/assets/icons/react.svg";
-import JavScriptIcon from "@/assets/icons/square-js.svg";
 import bookImage from "@/assets/images/book-cover.png";
 import mapImage from "@/assets/images/map.png";
 import smileMemoji from "@/assets/images/memoji-smile.png";
@@ -18,104 +12,9 @@ import Card from "@/components/card";
 import CardHeader from "@/components/card-header";
 import SectionHeader from "@/components/section-header";
 import ToolboxItem from "@/components/toolbox-item";
+import { hobbies, toolboxItems } from "@/lib/constants";
 
-const toolboxItems = [
-  {
-    title: "JavaScript",
-    iconType: JavScriptIcon,
-  },
-  {
-    title: "HTML5",
-    iconType: HTMLIcon,
-  },
-  {
-    title: "CSS3",
-    iconType: CSSIcon,
-  },
-  {
-    title: "React",
-    iconType: ReactIcon,
-  },
-  {
-    title: "Chrome",
-    iconType: ChromeIcon,
-  },
-  {
-    title: "GitHub",
-    iconType: GithubIcon,
-  },
-  {
-    title: "JavaScript",
-    iconType: JavScriptIcon,
-  },
-  {
-    title: "HTML5",
-    iconType: HTMLIcon,
-  },
-  {
-    title: "CSS3",
-    iconType: CSSIcon,
-  },
-  {
-    title: "React",
-    iconType: ReactIcon,
-  },
-  {
-    title: "Chrome",
-    iconType: ChromeIcon,
-  },
-  {
-    title: "GitHub",
-    iconType: GithubIcon,
-  },
-];
-
-const hobbies = [
-  {
-    title: "Painting",
-    emoji: "🎨",
-    left: "5%",
-    top: "5%",
-  },
-  {
-    title: "Photography",
-    emoji: "📷",
-    left: "50%",
-    top: "5%",
-  },
-  {
-    title: "Hiking",
-    emoji: "🥾",
-    left: "35%",
-    top: "40%",
-  },
-  {
-    title: "Gaming",
-    emoji: "🎮",
-    left: "10%",
-    top: "35%",
-  },
-  {
-    title: "Music",
-    emoji: "🎵",
-    left: "70%",
-    top: "45%",
-  },
-  {
-    title: "Fitness",
-    emoji: "🏋️",
-    left: "5%",
-    top: "65%",
-  },
-  {
-    title: "Reading",
-    emoji: "📚",
-    left: "45%",
-    top: "70%",
-  },
-];
-
-export const AboutSection = () => {
+const AboutSection = () => {
   const constraintRef = useRef(null);
 
   return (
@@ -207,3 +106,5 @@ export const AboutSection = () => {
     </div>
   );
 };
+
+export default AboutSection;

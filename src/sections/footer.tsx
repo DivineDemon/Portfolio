@@ -1,25 +1,7 @@
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
+import { footerLinks } from "@/lib/constants";
 
-const footerLinks = [
-  {
-    title: "GitHub",
-    href: "https://github.com/DivineDemon",
-  },
-  {
-    title: "Stack Overflow",
-    href: "https://stackoverflow.com/users/9131774/mushood-hanif",
-  },
-  {
-    title: "Instagram",
-    href: "https://www.instagram.com/mushood_7/",
-  },
-  {
-    title: "LinkedIn",
-    href: "https://www.linkedin.com/in/mushood-hanif/",
-  },
-];
-
-export const Footer = () => {
+const Footer = () => {
   return (
     <footer className="relative overflow-x-clip">
       <div className="absolute bottom-0 left-1/2 -z-10 h-[400px] w-[1600px] -translate-x-1/2 bg-emerald-300/30 [mask-image:radial-gradient(50%_50%_at_bottom_center,black,transparent)]"></div>
@@ -45,3 +27,5 @@ export const Footer = () => {
     </footer>
   );
 };
+
+export default Footer;

@@ -1,10 +1,16 @@
-import type { Metadata } from "next";
+import { type Metadata } from "next";
 import { Calistoga, Inter } from "next/font/google";
-import { Suspense } from "react";
 
+import "@/assets/css/globals.css";
 import { cn } from "@/lib/utils";
+import { TRPCReactProvider } from "@/trpc/react";
 
-import "./globals.css";
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const calistoga = Calistoga({
+  subsets: ["latin"],
+  variable: "--font-serif",
+  weight: ["400"],
+});
 
 export const metadata: Metadata = {
   title: "Mushood Hanif",
@@ -41,18 +47,9 @@ export const metadata: Metadata = {
   publisher: "Mushood Hanif",
 };
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
-const calistoga = Calistoga({
-  subsets: ["latin"],
-  variable: "--font-serif",
-  weight: ["400"],
-});
-
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body
@@ -62,7 +59,7 @@ export default function RootLayout({
           calistoga.variable
         )}
       >
-        <Suspense>{children}</Suspense>
+        <TRPCReactProvider>{children}</TRPCReactProvider>
       </body>
     </html>
   );
