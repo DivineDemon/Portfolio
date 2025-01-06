@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
+import Github from "@/assets/icons/git.svg";
 import Card from "@/components/card";
 import SectionHeader from "@/components/section-header";
 import { portfolioProjects } from "@/lib/constants";
@@ -19,9 +20,9 @@ const ProjectsSection = () => {
         <div className="mt-6 flex w-full items-center justify-center">
           <Link
             href="https://github.com/DivineDemon"
-            className="rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 px-6 py-2 font-medium text-gray-950"
+            className="flex gap-1 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 px-6 py-2 font-medium text-gray-950"
           >
-            View More
+            View More on <Github className="size-6" />
           </Link>
         </div>
         <div className="mt-10 flex flex-col gap-20 md:mt-20">
@@ -68,7 +69,7 @@ const ProjectsSection = () => {
                   <Image
                     src={project.image}
                     alt={project.title}
-                    className="mb:-mb-0 -mb-4 mt-8 lg:absolute lg:mt-0 lg:h-full lg:w-auto lg:max-w-none"
+                    className="mb:-mb-0 -mb-4 mt-8 rounded-t-2xl lg:absolute lg:mt-0 lg:h-full lg:w-auto lg:max-w-none"
                   />
                 </div>
               </div>

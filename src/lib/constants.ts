@@ -4,9 +4,11 @@ import GithubIcon from "@/assets/icons/github.svg";
 import HTMLIcon from "@/assets/icons/html5.svg";
 import ReactIcon from "@/assets/icons/react.svg";
 import JavScriptIcon from "@/assets/icons/square-js.svg";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
+import CityCrm from "@/assets/images/city-crm.png";
+import CityWebsite from "@/assets/images/city.png";
+import DripWebsite from "@/assets/images/drip.png";
+import FCCms from "@/assets/images/fc-cms.png";
+import FCWebsite from "@/assets/images/fc-website.png";
 import memojiAvatar1 from "@/assets/images/memoji-avatar-1.png";
 import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
 import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
@@ -130,40 +132,88 @@ export const footerLinks = [
 
 export const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
-  },
-  {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
-    results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
-    ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
-  },
-  {
-    company: "Quantum Dynamics",
+    company: "F&C Properties",
     year: "2023",
-    title: "AI Startup Landing Page",
+    title: "Company Website",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      {
+        title: "Achieved a 51.7% increase in website traffic and impressions.",
+      },
+      {
+        title:
+          "Achieved a 23.3% increase in quality of organic real-estate leads.",
+      },
+      { title: "Achieved 16% growth for Company Revenue." },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link: "https://fandcproperties.ae",
+    image: FCWebsite,
+  },
+  {
+    company: "City Doctor",
+    year: "2023",
+    title: "Company Website",
+    results: [
+      {
+        title: "Achieved a 22.6% increase in website traffic and impressions.",
+      },
+      { title: "Expanded customer reach by 35%." },
+      { title: "Implemented Advanced SEO techniques." },
+    ],
+    link: "https://citydoctor.vercel.app",
+    image: CityWebsite,
+  },
+  {
+    company: "Driphvb",
+    year: "2023",
+    title: "Company Website",
+    results: [
+      {
+        title: "Achieved a 28.3% increase in website traffic and impressions.",
+      },
+      { title: "Implemented Advanced SEO techniques." },
+      { title: "Increased mobile traffic by 44%." },
+    ],
+    link: "https://driphvb.vercel.app",
+    image: DripWebsite,
+  },
+  {
+    company: "F&C Properties",
+    year: "2023",
+    title: "CMS",
+    results: [
+      {
+        title:
+          "Achieved a 112% increase in data addition and processing speeds.",
+      },
+      {
+        title:
+          "Achieved a 9.4% increase in quality of organic real-estate leads.",
+      },
+      {
+        title:
+          "Reduced Firm Data Management Costs by approximately $50k/month.",
+      },
+    ],
+    link: "https://cms-fandcproperties.vercel.app",
+    image: FCCms,
+  },
+  {
+    company: "City Doctor",
+    year: "2023",
+    title: "CRM",
+    results: [
+      {
+        title: "Boosted scheduling efficiency by 40% in six months.",
+      },
+      {
+        title: "Reduced manual data entry by 60%.",
+      },
+      {
+        title: "Increased repeat customer engagement by 20%.",
+      },
+    ],
+    link: "https://city-crm.vercel.app",
+    image: CityCrm,
   },
 ];
 
@@ -194,63 +244,33 @@ export const words = [
 
 export const testimonials = [
   {
-    name: "Alex Turner",
-    position: "Marketing Manager @ TechStartups",
-    text: "Alex was instrumental in transforming our website into a powerful marketing tool. His attention to detail and ability to understand our brand is exceptional. We're thrilled with the results!",
+    name: "Qasim Irshaad",
+    position: "Tech Lead @ Digimark",
+    text: "Mushood was instrumental in transforming our frontend team into a powerful workforce. His attention to detail and ability to understand client needs is exceptional. We're thrilled with the results!",
     avatar: memojiAvatar1,
   },
   {
-    name: "Olivia Green",
-    position: "Head of Design @ GreenLeaf",
-    text: "Working with Alex was a pleasure. His expertise in frontend development brought our designs to life in a way we never imagined. The website has exceeded our expectations.",
+    name: "Farrukh Iminov",
+    position: "CEO @ F&C Properties",
+    text: "Working with Mushood was a pleasure. His expertise in frontend development brought our designs to life in a way we never imagined. The website has exceeded our expectations.",
     avatar: memojiAvatar2,
   },
   {
-    name: "Daniel White",
-    position: "CEO @ InnovateCo",
-    text: "Alex's ability to create seamless user experiences is unmatched. Our website has seen a significant increase in conversions since launching the new design. We couldn't be happier.",
+    name: "Irfan Saleem",
+    position: "CEO @ Intech Studios",
+    text: "Mushood's ability to create seamless user experiences is unmatched. Our company has seen a significant increase in conversions since launching the new design. We couldn't be happier.",
     avatar: memojiAvatar3,
   },
   {
-    name: "Emily Carter",
-    position: "Product Manager @ GlobalTech",
-    text: "Alex is a true frontend wizard. He took our complex product and transformed it into an intuitive and engaging user interface. We're already seeing positive feedback from our customers.",
+    name: "Ahmed Elnakewi",
+    position: "CEO @ City Doctor",
+    text: "Mushood is a true frontend wizard. He took our complex product and transformed it into an intuitive and engaging user interface. We're already seeing positive feedback from our customers.",
     avatar: memojiAvatar4,
   },
   {
-    name: "Michael Brown",
-    position: "Director of IT @ MegaCorp",
-    text: "Alex's work on our website has been nothing short of exceptional. He's a talented developer who is also a great communicator. We highly recommend him.",
-    avatar: memojiAvatar5,
-  },
-  {
-    name: "Alex Turner",
-    position: "Marketing Manager @ TechStartups",
-    text: "Alex was instrumental in transforming our website into a powerful marketing tool. His attention to detail and ability to understand our brand is exceptional. We're thrilled with the results!",
-    avatar: memojiAvatar1,
-  },
-  {
-    name: "Olivia Green",
-    position: "Head of Design @ GreenLeaf",
-    text: "Working with Alex was a pleasure. His expertise in frontend development brought our designs to life in a way we never imagined. The website has exceeded our expectations.",
-    avatar: memojiAvatar2,
-  },
-  {
-    name: "Daniel White",
-    position: "CEO @ InnovateCo",
-    text: "Alex's ability to create seamless user experiences is unmatched. Our website has seen a significant increase in conversions since launching the new design. We couldn't be happier.",
-    avatar: memojiAvatar3,
-  },
-  {
-    name: "Emily Carter",
-    position: "Product Manager @ GlobalTech",
-    text: "Alex is a true frontend wizard. He took our complex product and transformed it into an intuitive and engaging user interface. We're already seeing positive feedback from our customers.",
-    avatar: memojiAvatar4,
-  },
-  {
-    name: "Michael Brown",
-    position: "Director of IT @ MegaCorp",
-    text: "Alex's work on our website has been nothing short of exceptional. He's a talented developer who is also a great communicator. We highly recommend him.",
+    name: "Raghavendra Ghuge",
+    position: "CEO @ AIOMEGA",
+    text: "Mushood is an exceptional backend developer. He expertly built our product's core systems, ensuring robust performance, security, and scalability. His work has significantly enhanced our platform's stability and efficiency.",
     avatar: memojiAvatar5,
   },
 ];
