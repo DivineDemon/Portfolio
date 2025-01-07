@@ -51,7 +51,7 @@ const ProjectsSection = () => {
                         key={id}
                         className="flex gap-2 text-sm text-white/50 md:text-base"
                       >
-                        <CheckCircleIcon className="size-5 md:size-6" />
+                        <CheckCircleIcon className="size-5 shrink-0 md:size-6" />
                         <span>{result.title}</span>
                       </li>
                     ))}
