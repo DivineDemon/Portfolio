@@ -2,9 +2,12 @@ import Image from "next/image";
 
 import Card from "@/components/card";
 import SectionHeader from "@/components/section-header";
-import { testimonials } from "@/lib/constants";
 
-const TestimonialsSection = () => {
+interface TestimonialsSectionProps {
+  testimonials: TestimonialProps[];
+}
+
+const TestimonialsSection = ({ testimonials }: TestimonialsSectionProps) => {
   return (
     <div className="py-16 lg:py-24">
       <div className="container">
@@ -23,20 +26,24 @@ const TestimonialsSection = () => {
                 <div className="flex items-center gap-4">
                   <div className="inline-flex size-14 flex-shrink-0 items-center justify-center rounded-full bg-gray-700">
                     <Image
-                      src={testimonial.avatar}
-                      alt={testimonial.name}
-                      className="max-h-full"
+                      width={50}
+                      height={50}
+                      src={`${testimonial.image}`}
+                      alt={testimonial.client_name}
+                      className="aspect-square max-h-full rounded-full object-cover"
                     />
                   </div>
                   <div>
-                    <div className="font-semibold">{testimonial.name}</div>
+                    <div className="font-semibold">
+                      {testimonial.client_name}
+                    </div>
                     <div className="text-sm text-white/40">
-                      {testimonial.position}
+                      {testimonial.designation}&nbsp;@{testimonial.company}
                     </div>
                   </div>
                 </div>
                 <p className="mt-4 text-sm md:mt-6 md:text-base">
-                  {testimonial.text}
+                  {testimonial.content}
                 </p>
               </Card>
             ))}

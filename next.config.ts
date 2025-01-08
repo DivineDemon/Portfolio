@@ -6,6 +6,14 @@ import "./src/env.ts";
 
 /** @type {import("next").NextConfig} */
 const config = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "i.ibb.co",
+      },
+    ],
+  },
   webpack(config: { module: { rules: any[] } }) {
     const fileLoaderRule = config.module.rules.find(
       (rule: { test: { test: (arg0: string) => any } }) =>

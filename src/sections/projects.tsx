@@ -6,9 +6,12 @@ import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import Github from "@/assets/icons/git.svg";
 import Card from "@/components/card";
 import SectionHeader from "@/components/section-header";
-import { portfolioProjects } from "@/lib/constants";
 
-const ProjectsSection = () => {
+interface ProjectSectionProps {
+  projects: ProjectProps[];
+}
+
+const ProjectsSection = ({ projects }: ProjectSectionProps) => {
   return (
     <section id="projects" className="pb-16 lg:py-24">
       <div className="container">
@@ -26,7 +29,7 @@ const ProjectsSection = () => {
           </Link>
         </div>
         <div className="mt-10 flex flex-col gap-20 md:mt-20">
-          {portfolioProjects.map((project, idx) => (
+          {projects.map((project, idx) => (
             <Card
               key={idx}
               className="sticky px-8 pb-0 pt-8 md:px-10 md:pt-12 lg:px-20 lg:pt-16"
@@ -39,20 +42,20 @@ const ProjectsSection = () => {
                   <div className="inline-flex gap-2 bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-sm font-bold uppercase tracking-widest text-transparent">
                     <span>{project.company}</span>
                     <span>&bull;</span>
-                    <span>{project.year}</span>
+                    <span>{project.start_year}</span>
                   </div>
                   <h3 className="mt-2 font-serif text-2xl md:mt-5 md:text-4xl">
-                    {project.title}
+                    {project.project_name}
                   </h3>
                   <hr className="mt-4 border-t-2 border-white/5 md:mt-5" />
                   <ul className="mt-4 flex flex-col gap-4 md:mt-5">
-                    {project.results.map((result, id) => (
+                    {project.features.split(",").map((result, id) => (
                       <li
                         key={id}
                         className="flex gap-2 text-sm text-white/50 md:text-base"
                       >
                         <CheckCircleIcon className="size-5 shrink-0 md:size-6" />
-                        <span>{result.title}</span>
+                        <span>{result}</span>
                       </li>
                     ))}
                   </ul>
@@ -67,8 +70,10 @@ const ProjectsSection = () => {
                 </div>
                 <div className="relative">
                   <Image
-                    src={project.image}
-                    alt={project.title}
+                    src={`${project.image}`}
+                    alt={project.project_name}
+                    width={500}
+                    height={500}
                     className="mb:-mb-0 -mb-4 mt-8 rounded-t-2xl lg:absolute lg:mt-0 lg:h-full lg:w-auto lg:max-w-none"
                   />
                 </div>

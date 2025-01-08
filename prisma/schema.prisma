@@ -7,18 +7,19 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Project {
-  id           Int      @id @default(autoincrement())
-  features     String[]
+model projects {
+  image        String?
+  features     String  @default(dbgenerated("ARRAY[]::text[]"))
   link         String
+  id           Int     @id @default(autoincrement())
   company      String
   start_year   Int
   project_name String
 }
 
-model Testimonial {
-  id          Int     @id @default(autoincrement())
+model testimonials {
   image       String?
+  id          Int     @id @default(autoincrement())
   company     String
   content     String
   designation String
