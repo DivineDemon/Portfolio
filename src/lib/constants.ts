@@ -5,6 +5,10 @@ import HTMLIcon from "@/assets/icons/html5.svg";
 import ReactIcon from "@/assets/icons/react.svg";
 import JavScriptIcon from "@/assets/icons/square-js.svg";
 
+
+
+
+
 export const toolboxItems = [
   {
     title: "JavaScript",
@@ -88,16 +92,10 @@ export const hobbies = [
     top: "45%",
   },
   {
-    title: "Fitness",
-    emoji: "🏋️",
-    left: "5%",
-    top: "65%",
-  },
-  {
     title: "Reading",
     emoji: "📚",
-    left: "45%",
-    top: "70%",
+    left: "5%",
+    top: "65%",
   },
 ];
 
