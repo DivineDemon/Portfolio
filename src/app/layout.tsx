@@ -1,6 +1,8 @@
 import { type Metadata } from "next";
 import { Calistoga, Inter } from "next/font/google";
 
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 import "@/assets/css/globals.css";
 import { cn } from "@/lib/utils";
 import { TRPCReactProvider } from "@/trpc/react";
@@ -59,6 +61,7 @@ export default function RootLayout({
           calistoga.variable
         )}
       >
+        <SpeedInsights />
         <TRPCReactProvider>{children}</TRPCReactProvider>
       </body>
     </html>

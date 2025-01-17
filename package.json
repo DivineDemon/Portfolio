@@ -28,6 +28,7 @@
     "@trpc/client": "^11.0.0-rc.446",
     "@trpc/react-query": "^11.0.0-rc.446",
     "@trpc/server": "^11.0.0-rc.446",
+    "@vercel/speed-insights": "^1.1.0",
     "clsx": "^2.1.1",
     "eslint-define-config": "^2.1.0",
     "motion": "^11.15.0",

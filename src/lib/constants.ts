@@ -5,10 +5,6 @@ import HTMLIcon from "@/assets/icons/html5.svg";
 import ReactIcon from "@/assets/icons/react.svg";
 import JavScriptIcon from "@/assets/icons/square-js.svg";
 
-
-
-
-
 export const toolboxItems = [
   {
     title: "JavaScript",
